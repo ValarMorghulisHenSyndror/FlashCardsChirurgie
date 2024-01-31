@@ -1,17 +1,18 @@
 "use client"
-import QuizCard from '@/components/QuizCard';
-import React, { useState } from 'react';
-import styles from "./page.module.css";
-import { data } from '@/data/database';
+import QuizCard from '@/components/QuizCard'; 
+import styles from "./page.module.css"; 
+import { useState, useEffect } from 'react';
 
-const Quiz = () => {
-    const [questionIndex, setQuestionIndex] = useState(Math.floor(Math.random()*data.length))
-    const setRandomIndex = () => {
-        
-    }
+const Quiz = () => { 
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+     
     return (
         <div className={styles.quizContainer}> 
-            <QuizCard text={data[questionIndex].question} index={questionIndex+1}/>
+            {isClient ? <QuizCard/> : ""}
         </div>
     );
 };

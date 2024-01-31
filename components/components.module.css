@@ -54,6 +54,7 @@
     border-radius: 10px;
     transition: transform 1.5s;
     transform-style: preserve-3d;
+    cursor: pointer;
 }
 
 .back{
