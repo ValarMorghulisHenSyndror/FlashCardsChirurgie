@@ -1,0 +1,14 @@
+.quizContainer{
+    width: 1000px;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.quizContainer button{
+    width: 200px;
+}
