@@ -9,8 +9,7 @@ const Navbar = () => {
                 <Image src="/Logo.png" alt="Logo" width={50} height={50} />
                 <p className={styles.introTitle}>Flashcards</p>
             </Link>
-            <nav className={styles.navigation}>
-                <Link href="/">Main</Link>
+            <nav className={styles.navigation}> 
                 <Link href="/study">Study</Link>
                 <Link href="/Quiz">Quiz Yourself</Link>
             </nav>
