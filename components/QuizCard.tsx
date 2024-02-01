@@ -6,10 +6,15 @@ import { data } from "@/data/database";
 const QuizCard = ( ) => { 
     const [isActive, setIsActive] = useState(false);
     const [questionIndex, setQuestionIndex] = useState(Math.floor(Math.random()*data.length))
-    
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+ 
+    window.addEventListener("resize", () => {
+        setScreenWidth(window.innerWidth);
+    });
+
     const toogleState = () => setIsActive(!isActive);
     useEffect(() => {
-        VanillaTilt();
+        if(screenWidth>1000) VanillaTilt();
     }, []);
 
     return (
