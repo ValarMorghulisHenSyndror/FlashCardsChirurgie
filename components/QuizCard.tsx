@@ -15,7 +15,7 @@ const QuizCard = ( ) => {
     const toogleState = () => setIsActive(!isActive);
     useEffect(() => {
         if(screenWidth>1000) VanillaTilt();
-    }, []);
+    }, );
 
     return (
         <section data-tilt>

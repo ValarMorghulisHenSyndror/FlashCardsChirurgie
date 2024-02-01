@@ -4,16 +4,11 @@ import styles from "./page.module.css";
 import { useState, useEffect } from 'react';
 
 const Quiz = () => { 
-    const [isClient, setIsClient] = useState(false);
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+    const [isClient, setIsClient] = useState(false); 
     useEffect(() => {
         setIsClient(true);
     }, []);
-
-    window.addEventListener("resize", ()=>{ 
-        setScreenWidth(window.innerWidth)
-    })
-     
+ 
     return (
         <div className={styles.quizContainer}> 
             {isClient ? <QuizCard/> : ""}
