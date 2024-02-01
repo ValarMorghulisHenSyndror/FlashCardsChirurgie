@@ -11,7 +11,7 @@ export default function Home() {
                         <button className={styles.button}>Study</button>
                     </Link>
                     <Link href="/Quiz">
-                        <button className={styles.button}>Start Quiz</button>
+                        <button className={styles.button}>Quiz Yourself</button>
                     </Link>
                 </div>
             </div>

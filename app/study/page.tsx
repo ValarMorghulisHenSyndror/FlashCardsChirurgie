@@ -10,7 +10,8 @@ const study = () => {
                 <h1 className={styles.title}>Study Hall</h1>
                 <input type="text" className={styles.input} />
             </div>
-            <section className="">
+            <section className={styles.cardContainer
+            }>
                 {data.map((el, i) => (
                     <Minicard
                         title={el.question}

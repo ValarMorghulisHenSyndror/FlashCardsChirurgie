@@ -4,8 +4,7 @@ import {VanillaTilt} from "./tilt.js";
 import { data } from "@/data/database";
 
 const QuizCard = ( ) => { 
-    const [isActive, setIsActive] = useState(false);
-    const [isVisible, setIsVisible] = useState(false);
+    const [isActive, setIsActive] = useState(false); 
     const [questionIndex, setQuestionIndex] = useState(Math.floor(Math.random()*data.length))
     const [screenWidth, setScreenWidth] = useState(window.innerWidth); 
     window.addEventListener("resize", () => {
@@ -14,9 +13,7 @@ const QuizCard = ( ) => {
 
     const toogleState = () => { 
         setIsActive(!isActive)
-        setTimeout(()=>{
-            setIsVisible(!isVisible);
-        }, 420);
+         
     };
     useEffect(() => {
         if(screenWidth>1100) VanillaTilt();
@@ -28,7 +25,7 @@ const QuizCard = ( ) => {
                 <div className={styles.front }>
                     <span className={styles.question}>{`${questionIndex+1}. ${data[questionIndex].question}`}</span>
                 </div>
-                <div className={[styles.back, isVisible ? styles.visible : ""].join(' ')}></div>
+                <div className={styles.back}></div>
             </div> 
             <script></script>
         </section> 

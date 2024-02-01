@@ -12,6 +12,9 @@ const Quiz = () => {
     return (
         <div className={styles.quizContainer}> 
             {isClient ? <QuizCard/> : ""}
+            <div className={styles.quizButtonsContainer}>
+                <button>Draw a card</button>
+            </div>
         </div>
     );
 };

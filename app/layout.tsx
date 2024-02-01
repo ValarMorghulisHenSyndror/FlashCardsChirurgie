@@ -6,6 +6,12 @@ import Navbar from "@/components/Navbar";
 export const metadata: Metadata = {
     title: "FlashCards Chirurgie",
     description: "Studying Dental Surgery",
+    icons: [
+        {
+            url: "/logo.png",
+            href: "/logo.png",
+        },
+    ],
 };
 
 export default function RootLayout({
