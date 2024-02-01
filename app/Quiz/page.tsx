@@ -5,16 +5,18 @@ import { useState, useEffect } from 'react';
 
 const Quiz = () => { 
     const [isClient, setIsClient] = useState(false); 
+    
     useEffect(() => {
         setIsClient(true);
     }, []);
- 
+    
+    const getNewCard = () => {
+
+    }
+
     return (
         <div className={styles.quizContainer}> 
-            {isClient ? <QuizCard/> : ""}
-            <div className={styles.quizButtonsContainer}>
-                <button>Draw a card</button>
-            </div>
+            {isClient ? <QuizCard/> : ""} 
         </div>
     );
 };

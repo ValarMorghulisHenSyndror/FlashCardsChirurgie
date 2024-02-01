@@ -1,40 +1,89 @@
-import styles from "./components.module.css"; 
-import { useEffect, useState } from "react"; 
-import {VanillaTilt} from "./tilt.js";
+import styles from "./components.module.css";
+import { ReactNode, useEffect, useState, useMemo } from "react";
+import { VanillaTilt } from "./tilt.js";
 import { data } from "@/data/database";
 
-let done = true;
-const QuizCard = ( ) => { 
+const QuizCard = (): ReactNode => {
     const [isActive, setIsActive] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
-    const [questionIndex, setQuestionIndex] = useState(Math.floor(Math.random()*data.length))
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth); 
-    window.addEventListener("resize", () => {
-        setScreenWidth(window.innerWidth);
-    });
-    const toogleState = () => { 
-        if(done){ 
-            setIsActive(!isActive)
-            done = false;
-            setTimeout(()=>{
-                setIsVisible(!isVisible); 
-                done = true;
-            }, 420); 
+    const [newCard, setNewCard] = useState(false);
+    const [seeNewCard, setSeeNewCard] = useState(false);
+    const [index, setIndex] = useState(0);
+
+    const shuffledArray = useMemo(
+        () => generateRandomArray(data.length),
+        [data.length]
+    );
+
+    useEffect(() => {
+        VanillaTilt();
+    }, []);
+
+    const toggleState = () => {
+        if (!isActive) {
+            setIsActive(true);
+            setTimeout(() => {
+                setIsVisible((prev) => !prev);
+                setIsActive(false);
+            }, 420);
         }
     };
-   
+
+    const getNewCard = () => {
+        setSeeNewCard(true);
+        setIsActive(false);
+        setTimeout(() => {
+            setNewCard(true);
+        }, 1);
+
+        setTimeout(() => {
+            if (index === data.length - 1) {
+                setIndex(0);
+            } else {
+                setIndex((prev) => prev + 1);
+            }
+
+            setIsVisible(false);
+            setNewCard(false);
+            setSeeNewCard(false);
+        }, 2000);
+    };
 
     return (
-        <section className={styles.section} data-tilt>
-            <div className={[styles.quizCardContainer, isActive ? styles.active : ""].join(' ')} onClick={toogleState}>
-                <div className={styles.front }>
-                    <span className={styles.question}>{`${questionIndex+1}. ${data[questionIndex].question}`}</span>
+        <section className={styles.quizCardOuterContainer}>
+            <section className={styles.section} data-tilt>
+                <div
+                    className={`${styles.quizCardContainer} ${
+                        isActive ? styles.active : ""
+                    }`}
+                    onClick={toggleState}
+                >
+                    <div className={styles.front}>
+                        <span className={styles.question}>{`${
+                            shuffledArray[index] + 1
+                        }. ${data[shuffledArray[index]].question}`}</span>
+                    </div>
+                    <div
+                        className={`${styles.back} ${
+                            isVisible ? styles.visible : ""
+                        }`}
+                    ></div>
+                    <div
+                        className={`${styles.newCard} ${
+                            newCard ? styles.active : ""
+                        } ${seeNewCard ? styles.visibleNewCard : ""}`}
+                    ></div>
                 </div>
-                <div className={[styles.back, isVisible ? styles.visible : ""].join(' ')}></div>
-            </div> 
-            <script></script>
-        </section> 
+            </section>
+            <button onClick={getNewCard}>Draw a card</button>
+        </section>
     );
 };
+
+function generateRandomArray(n: number): number[] {
+    return Array.from({ length: n }, (_, index) => index).sort(
+        () => Math.random() - 0.5
+    );
+}
 
 export default QuizCard;
