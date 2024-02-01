@@ -12,3 +12,16 @@
 .quizContainer button{
     width: 200px;
 }
+
+@media screen and (max-width: 1000px){
+    .quizContainer{
+        width: 700px; 
+    }
+}
+
+
+@media screen and (max-width: 330px){
+    .quizContainer{
+        width: 250px; 
+    }
+}
