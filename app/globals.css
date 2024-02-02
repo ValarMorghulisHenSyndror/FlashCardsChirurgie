@@ -22,7 +22,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
     color: black;
 }
 
-body{
+:root{
     background: url("../public/HomeWallpaperShadowed.png") center no-repeat;
     background-size: cover; 
     background-attachment: fixed;

@@ -47,13 +47,31 @@
 }
 
 /*-----------------------------------------------------------------------------------QuizCardStyles-------------------------------------------------------------------------------*/
- 
+
+
 .quizCardOuterContainer{
     display: flex;
+    width: 100%;
+    margin: 0 auto;
     flex-direction: column;
     gap: 20px;
+    padding-top: 100px  ;
     align-items: center;
 }
+
+.quizCardOuterContainer button{
+    width: 200px;
+    background-color: #141414; 
+    height: 50px;
+    color: #e3bc58;
+    border-radius: 0;
+    font-weight: 600;
+    transition: all 0.3s ease;
+} 
+.quizCardOuterContainer button:hover{
+    outline: 3px solid #e0b958;
+
+} 
 
 .quizCardContainer{
     position: relative;
@@ -124,7 +142,7 @@
     display: none;
     background: url(../public/Back.png) center no-repeat;
     background-size: cover;   
-    transition: transform 2s;
+    transition: transform 1.5s;
 }
 
 .newCard.visibleNewCard{
@@ -151,6 +169,43 @@
     }
 }
 
+
+.answerTextContainer{ 
+    display: grid; 
+    grid-template-rows: 0fr; 
+    background-color: #141414;
+    transition: grid-template-rows 0.5s ease-in;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+
+
+.answerTextContainer > div{
+    overflow: hidden; 
+}
+
+.answerContainer.opened .answerTextContainer{
+    padding: 20px;
+    grid-template-rows: 1fr;
+}
+ 
+.answerTextContainer p{
+    color: rgb(250, 225, 255);
+    font-size: 35px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.answerText{ 
+    font-size: 25px; 
+    text-align: left;
+}
+
+.answerText li{
+    color: rgb(250, 225, 255); 
+    line-height: 35px;
+}
  
  
 /*------------------------------------------------------------------------Navbar Styles---------------------------------------------------------------------------------- */
@@ -185,7 +240,7 @@
 }
 
 .navigation a:hover{ 
-    border-bottom: 2px solid #f696a4;
+    border-bottom: 2px solid #e0b958;
 }
 
 
@@ -215,6 +270,17 @@
     .introTitle{
         display: none;
     }
+    .answerTextContainer p{ 
+        font-size: 25px;  
+    }
+
+    .answerText{ 
+        font-size: 15px;   
+    }
+
+    .answerText li{ 
+        line-height: 23px;
+    }
 }
 
 
@@ -231,6 +297,21 @@
     .navbarContainer{
         padding: 20px 10px;
         font-size: 12px;
+    }
+    .answerTextContainer p{
+        color: rgb(250, 225, 255);
+        font-size: 25px;
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+
+    .answerText{ 
+        font-size: 25px;   
+    }
+
+    .answerText li{
+        color: rgb(250, 225, 255); 
+        line-height: 35px;
     }
 
 }

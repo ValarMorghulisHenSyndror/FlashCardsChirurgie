@@ -3,12 +3,14 @@ import { ReactNode, useEffect, useState, useMemo } from "react";
 import { VanillaTilt } from "./tilt.js";
 import { data } from "@/data/database";
 
+console.log(data.length)
 const QuizCard = (): ReactNode => {
     const [isActive, setIsActive] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
     const [newCard, setNewCard] = useState(false);
     const [seeNewCard, setSeeNewCard] = useState(false);
     const [index, setIndex] = useState(0);
+    const [answerState, setAnswerState] = useState(false);
 
     const shuffledArray = useMemo(
         () => generateRandomArray(data.length),
@@ -32,6 +34,7 @@ const QuizCard = (): ReactNode => {
     const getNewCard = () => {
         setSeeNewCard(true);
         setIsActive(false);
+        setAnswerState(false);
         setTimeout(() => {
             setNewCard(true);
         }, 1);
@@ -42,11 +45,10 @@ const QuizCard = (): ReactNode => {
             } else {
                 setIndex((prev) => prev + 1);
             }
-
             setIsVisible(false);
             setNewCard(false);
             setSeeNewCard(false);
-        }, 2000);
+        }, 1500);
     };
 
     return (
@@ -68,14 +70,21 @@ const QuizCard = (): ReactNode => {
                             isVisible ? styles.visible : ""
                         }`}
                     ></div>
-                    <div
-                        className={`${styles.newCard} ${
-                            newCard ? styles.active : ""
-                        } ${seeNewCard ? styles.visibleNewCard : ""}`}
-                    ></div>
+                    <div className={`${styles.newCard} ${ newCard ? styles.active : "" } ${seeNewCard ? styles.visibleNewCard : ""}`}></div>
                 </div>
             </section>
             <button onClick={getNewCard}>Draw a card</button>
+            <article className={`${styles.answerContainer} ${answerState ? styles.opened : ""}`}>        
+                <button className={styles.answerButton} onClick={()=>{setAnswerState(true)}}>Check answer</button>
+                <div className={styles.answerTextContainer}>
+                    <div>
+                        <p>{data[shuffledArray[index]].question}</p>
+                        <ul className={styles.answerText}>
+                            {data[shuffledArray[index]].answer.map((el, index)=><li key={index} >{el}</li>)}
+                        </ul>
+                    </div>
+                </div>
+            </article>
         </section>
     );
 };

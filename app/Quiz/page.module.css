@@ -3,8 +3,7 @@
     height: 80vh;
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    justify-content: center;
+    gap: 40px; 
     align-items: center; 
     margin: 0 auto;
     text-align: center;
@@ -15,13 +14,19 @@
     width: 200px;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1020px){
     .quizContainer{
         width: 700px; 
     }
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 720px){
+    .quizContainer{
+        width: 600px; 
+    }
+}
+
+@media screen and (max-width: 620px){
     .quizContainer{
         width: 400px; 
     }
