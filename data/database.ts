@@ -102,7 +102,73 @@ export const data = [
     },
     {
         question: "Articaina - Posologie și mod de administrare",
-        answer: ["", ""],
+        answer: [
+            "•Potenta=2 ori>xilina",
+            "•Toxicitate 1-1,5 ori>procaine",
+            "•Durata instalare:2-3 minute",
+            "•Durata anestezie:60-75 min",
+            "•Peak plasmatic 30 min",
+            "•T1/2: 100-110 min",
+            "•Legare protein 90-94%",
+            "•Metabolizare hepatica 8%",
+            "•Elim renala 12-24 ore",
+            "-",
+            "Carpulele cu articaină au un volum de 1,7 ml",
+            "•1ml sol. clorhidrat de articaină 4% cu adrenalină 1:200.000 conţine 40 mg clorhidrat de articaină şi 0,005 mg de adrenalină ",
+            "•o carpulă (1,7 ml) conține 68 mg clorhidrat de articaină şi 0,0085mg de adrenalină. ",
+            "•1ml de soluție de clorhidrat de articaină 4% cu adrenalină 1:100.000 conţine 40 mg clorhidrat de articaină şi 0,010 mg de adrenalină ",
+            "•o carpulă (1,7ml) conține 68 mg clorhidrat de articaină şi 0,017 mg de adrenalină ",
+            "-",
+            "Pacienţii adulţi, normoponderali, fără alte afecţiuni generale: doza terapeutică maximă recomandată pentru articaină 4% = 7 mg/kg-corp, fără a depăşi 500 mg (echivalentul a 12,5 ml soluție injectabilă), ceea ce corespunde unui număr maxim de 7 carpule ",
+            "•pacienţii în vârstă sau/şi cu afecţiuni cardiace, hepatice sau renale: se recomandă limitarea la 1/2 din doza terapeutică maximă - 3,5 carpule de articaină 4%. ",
+            "•copiii > 4 ani: doza maximă de articaină 4% recomandată la copii este de 7 mg/kg-corp (0,175 ml/kgcorp). ",
+        ],
+    },
+    {
+        question: "Articaina - Contraindicații și precauții",
+        answer: [
+            `	Articaina HCl este contraindicată la pacineţii cunoscuţi cu hipersensibilitate la anestezice locale de tip amidic.
+	Se va evita în special administrarea la pacienţii care au prezentat bronhospasm în antecedente, deoarece anestezicele locale cu articaină conţin în general conservanţi de tip sulfit (pentru adrenalină). 
+	Articaina este de asemenea contraindicată la: 
+I.	pacienţi cunoscuţi cu deficit de colinesterază plasmatică
+II.	pacienţi cu tulburări de conducere atrio-ventriculară severe(blocuri)
+pt anestezicile tronculare periferice(spix, tuberozitate) injectarea intravasculara poate determina scaderea frecventei cardiace, cu scaderea tensiunii arteriale=>bradicardie=>ASISTOLIE(insuf card totala)=>Stop cardio-respirator
+*aceasta contraindicatie nu este valabila si pt ANESTEZIA SUPRAPERIOSTALA PARAPICALA
+III.	pacienţi epileptici fără tratament
+IV.	porfirie acută recurentă. 
+V.	Având în vedere metabolizarea hepatică şi eliminarea renală, este necesară administrarea cu precauţie la pacienţii cu afecţiuni hepatice sau renale severe. 
+VI.	La sportivii de performanţă articaina poate da un fals rezultat pozitiv la testele de dopaj. 
+
+
+Efectul simptomatic al vasoconstrictorului 
+poate fi intensificat de: 
+- IMAO –inhibitor de monoaminoxidaza
+(Iproniazid) 
+- antidepresive triciclice 
+(Clomipramina) 
+- Guanetidină –antihipertensiv, reduce eliminarea de catecolamine
+(Ismelin) 
+- β-blocante non-cardioselective 
+(Propranolol)
+
+
+Efecte adverse 
+•Neurologice: cefalee, tremurături, nistagmus(miscare ocularainvoluntara), logoree, ameţeală, greaţă 
+•Respiratorii: tahipnee(accelereaza ritmul respiratiei), urmată de bradipnee(rarirea anormala a miscarilor) şi în final apnee (oprirea temporara a resp)
+•Cardiovasculare: scăderea alurii ventriculare / prăbuşirea TA 
+•Risc crescut de necroză locală 
+•Tulburări de sensibilitate persistente 
+
+Administrarea în timpul gravidităţii şi lactaţiei:
+
+
+clasa de toxicitate C. 
+•se leagă în procent de 90%-94 de proteinele plasmatice, deci numai 10% poate trece în circulaţia fetală 
+•se recomandă evitarea în primul trimestru de sarcină(ADRENALINA ACTIONEAZA PE REC BETA2 RELAXAND MUSCULATURA UTERINA 
+•eliminarea articainei în laptele matern este incertă 
+•se recomandă înlocuirea alimentaţiei la sân 24 de ore 
+`,
+        ],
     },
     {
         question: "",
