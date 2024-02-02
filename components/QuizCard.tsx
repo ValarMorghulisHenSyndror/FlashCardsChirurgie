@@ -2,6 +2,7 @@ import styles from "./components.module.css";
 import { ReactNode, useEffect, useState, useMemo } from "react";
 import { VanillaTilt } from "./tilt.js";
 import { data } from "@/data/database";
+import Image from "next/image";
 
 console.log(data.length)
 const QuizCard = (): ReactNode => {
@@ -70,18 +71,41 @@ const QuizCard = (): ReactNode => {
                             isVisible ? styles.visible : ""
                         }`}
                     ></div>
-                    <div className={`${styles.newCard} ${ newCard ? styles.active : "" } ${seeNewCard ? styles.visibleNewCard : ""}`}></div>
+                    <div
+                        className={`${styles.newCard} ${
+                            newCard ? styles.active : ""
+                        } ${seeNewCard ? styles.visibleNewCard : ""}`}
+                    ></div>
                 </div>
             </section>
             <button onClick={getNewCard}>Draw a card</button>
-            <article className={`${styles.answerContainer} ${answerState ? styles.opened : ""}`}>        
-                <button className={styles.answerButton} onClick={()=>{setAnswerState(true)}}>Check answer</button>
+            <article
+                className={`${styles.answerContainer} ${
+                    answerState ? styles.opened : ""
+                }`}
+            >
+                <button
+                    className={styles.answerButton}
+                    onClick={() => {
+                        setAnswerState(true);
+                    }}
+                >
+                    Check answer
+                </button>
                 <div className={styles.answerTextContainer}>
                     <div>
                         <p>{data[shuffledArray[index]].question}</p>
-                        <ul className={styles.answerText}>
-                            {data[shuffledArray[index]].answer.map((el, index)=><li key={index} >{el}</li>)}
-                        </ul>
+                        {typeof data[shuffledArray[index]].answer === "string" ? (
+                            <Image src={data[shuffledArray[index]].answer as string} alt="text" width={1000} height={1000}/>
+                        ) : (
+                            <ul className={styles.answerText}>
+                                {(data[shuffledArray[index]].answer as string[]).map(
+                                    (el: string, index: number) => (
+                                        <li key={index}>{el}</li>
+                                    )
+                                )}
+                            </ul>
+                        )}
                     </div>
                 </div>
             </article>
