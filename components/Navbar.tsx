@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./components.module.css"
 
-const Navbar = () => {
+const Navbar = ():React.ReactNode => {
     return (
         <section className={styles.navbarContainer}>
             <Link href="/" className={styles.intro}>

@@ -3,8 +3,7 @@ import { ReactNode, useEffect, useState, useMemo } from "react";
 import { VanillaTilt } from "./tilt.js";
 import { data } from "@/data/database";
 import Image from "next/image";
-
-console.log(data.length)
+ 
 const QuizCard = (): ReactNode => {
     const [isActive, setIsActive] = useState(false);
     const [isVisible, setIsVisible] = useState(false);

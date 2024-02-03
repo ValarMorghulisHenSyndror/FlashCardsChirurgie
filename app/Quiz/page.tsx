@@ -1,9 +1,9 @@
 "use client"
 import QuizCard from '@/components/QuizCard'; 
 import styles from "./page.module.css"; 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const Quiz = () => { 
+const Quiz = ():React.ReactNode => { 
     const [isClient, setIsClient] = useState(false); 
     
     useEffect(() => {

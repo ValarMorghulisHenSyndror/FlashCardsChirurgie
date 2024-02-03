@@ -20,3 +20,17 @@
     justify-content: center; 
     flex-direction: column;
 }
+
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    gap: 40px 20px;
+}
+
+@media screen and (max-width: 1000px){
+    .cardContainer{
+        gap: 20px 20px;
+    }
+}

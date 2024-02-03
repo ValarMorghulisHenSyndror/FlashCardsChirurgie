@@ -1,33 +1,33 @@
+ 
+
 /*----------------------------------------------------------------------------------CardStyles----------------------------------------------------------------------------------- */
 
 .card-container{
-    width: 273.75px;
-    height: 168.75px;
+    width: 525px;
+    height: 300px; 
     background: url(../public/Flashcard.png) center no-repeat;
     background-size: cover;
-    border: 2px solid grey;
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 20px;
-    position: relative;
-
+    position: relative; 
 }
-
-.checkout-container{
+ 
+.card-container::before{
+    content: "";
     position: absolute;
-    width: 273.75px;
-    height: 168.75px; 
-    border-radius: 20px;
-    background-color: rgba(122, 122, 122, 0.594);
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-    opacity: 0;
-    transition: opacity 0.5s;
+    width: 100%;
+    height: 100%;
+    background-color: #14141400;
+    border-radius: 20px; 
+    transition: background-color 0.5s ease;
+    z-index: 0;
 }
 
-.card-container:hover .checkout-container{
-    opacity: 1;
+.card-container:hover::before{
+    background-color: #141414af;
+}
+.card-container:hover .title{
+    font-size: 30px;
 }
 
 .card-content{ 
@@ -43,7 +43,9 @@
     font-weight: bold;
     text-align: center;
     color: white;
-    padding: 2px;
+    padding: 10px;
+    transition: font-size 1s ease;
+    z-index: 1;
 }
 
 /*-----------------------------------------------------------------------------------QuizCardStyles-------------------------------------------------------------------------------*/
@@ -180,8 +182,8 @@
     border-radius: 10px;
 }
 
-.answerTextContainer img{ 
-    width: 99%;
+.answerTextContainer img, .studyCardContainer img{ 
+    width: 100%;
     height: auto;
 }
 
@@ -248,14 +250,54 @@
     border-bottom: 2px solid #e0b958;
 }
 
+/*-------------------------------------------------------------------------StudyCard Styles-------------------------------------------------------------------- */
+
+.studyCardContainer{
+    max-width: 80%;
+    margin: 0 auto;
+    background-color: rgba(240, 248, 255, 0.625);
+    border-radius: 5px;
+}
+
+.studyTitle{
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+    font-weight: 700;
+}
+
+.studyAnswerText{
+    padding: 30px;
+    font-size: 25px;
+}
 
 /*---------------------------------------------------------------------Media Styles------------------------------------------------------------------------ */
 
 
 @media screen and (max-width: 1000px) {
+    .studyTitle{ 
+        font-size: 25px;  
+    }
+    .studyAnswerText{ 
+        font-size: 20px;
+    }
+    .studyCardContainer{
+        width: 700px;
+    }
     .quizCardContainer{ 
         width: 500px;
         height: 286px;    
+    }
+    .card-container{
+        width: 350px;
+        height: 200px;
+    }
+    .title{
+        font-size: 17px;
+    }
+    .card-container:hover .title{
+        font-size: 20px;
+        padding: 5px;
     }
     .question{
         font-size: 23px; 
@@ -264,6 +306,16 @@
 }
 
 @media screen and (max-width: 700px) {
+    .studyTitle{ 
+        font-size: 20px;  
+    }
+
+    .studyAnswerText{ 
+        font-size: 16px;
+    }
+    .studyCardContainer{
+        width: 400;
+    }
     .quizCardContainer{ 
         width: 400px;
         height: 229px;    
@@ -290,7 +342,10 @@
 
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 410px) {
+    .studyCardContainer{
+        width: 370px;
+    }
     .quizCardContainer{ 
         width: 300px;
         height: 171px;    

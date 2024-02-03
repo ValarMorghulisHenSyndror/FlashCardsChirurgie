@@ -1,9 +1,12 @@
 import React from 'react'
+import StudyCard from '@/components/StudyCard';
 
-const StudyCard = () => {
-  return (
-    <div>StudyCars</div>
-  )
+const StudyCardPage = ({params}:{params: {cardIndex:number}} ):React.ReactNode => { 
+    return (
+        <div>
+            <StudyCard index={params.cardIndex}/>
+        </div>  
+    )
 }
 
-export default StudyCard;
+export default StudyCardPage;
