@@ -1,4 +1,4 @@
-export const data = [
+const rawData = [
     {
         question: "Lidocaina – Posologie și mod de administrare",
         answer: [
@@ -862,7 +862,270 @@ export const data = [
             "Nu se va incerca indepartarea formatiunii chistice cand aceasta nu este complet detasata de peretii cavitatii",
             "Se recomanda trimiterea leziunii periapicale pt examen histopatologic",
             "5.rezecţia apexului : expunerea foramenului/canalelor prin sectionarea apexului bizotat pentru a vizualiza radacina restanta si putea prepara o cavitate de clasa 1 pt obturatia retrograde",
-            "Este necesară, dar nu suficientă pentru reuşita intervenţiei ", 
+            "Este necesară, dar nu suficientă pentru reuşita intervenţiei ",
         ],
     },
+    {
+        question: "INDICAȚIILE REZECȚIEI APICALE",
+        answer: "/118.jpg",
+    },
+
+    {
+        question: "CONTRAINDICAȚII ABSOLUTE ȘI RELATIVE ALE REZECȚIEI APICALE",
+        answer: "/119.jpg",
+    },
+
+    {
+        question:
+            "TIPURI DE LAMBOURI UTILIZATE ÎN REZECȚIA APICALĂ: LAMBOUL SEMILUNAR – AVANTAJE, DEZAVANTAJE",
+        answer: "/120.jpg",
+    },
+
+    {
+        question:
+            "TIPURI DE LAMBOURI UTILIZATE ÎN REZECȚIA APICALĂ: LAMBOUL LUEBKE-OCHSENBEIN – AVANTAJE, DEZAVANTAJE",
+        answer: "/121.jpg",
+    },
+
+    {
+        question:
+            "TIPURI DE LAMBOURI UTILIZATE ÎN REZECȚIA APICALĂ: LAMBOUL INTRASULCULAR ÎN ”L” – AVANTAJE, DEZAVANTAJE",
+        answer: "/122.jpg",
+    },
+
+    {
+        question:
+            "TIPURI DE LAMBOURI UTILIZATE ÎN REZECȚIA APICALĂ: LAMBOUL INTRASULCULAR ÎN ”TRAPEZ” – AVANTAJE, DEZAVANTAJE",
+        answer: "/123.jpg",
+    },
+
+    {
+        question:
+            "LAMBOUL ÎN ”PLIC” PENTRU ABORDUL PALATINAL ÎN REZECȚIA APICALĂ – AVANTAJE, DEZAVANTAJE",
+        answer: "/124.jpg",
+    },
+
+    {
+        question: "DECOLAREA LMBOURILOR ÎN REZECȚIA APICALĂ",
+        answer: "/125.jpg",
+    },
+
+    {
+        question: "ACCIDENTE INTRAOPERATORII ALE REZECȚIEI APICALE",
+        answer: "/126.jpg",
+    },
+
+    {
+        question: " COMPLICAȚII IMEDIATE ȘI TARDIVE ALE REZECȚIEI APICALE",
+        answer: "/127.jpg",
+    },
+
+    {
+        question: "ANOMALII ALE FRENURILOR: FRENOPLASTIA ÎN ”Z”",
+        answer: "/128.jpg",
+    },
+
+    {
+        question:
+            "ANOMALII ALE FRENURILOR: FRENOPLASTIA CU VESTIBULOPLASTIE INDICAȚIE ",
+        answer: "/129.jpg",
+    },
+
+    {
+        question: "ANOMALII ALE FRENURILOR: FRENUL LINGUAL – FRENOTOMIA",
+        answer: "/130.jpg",
+    },
+
+    {
+        question: "ANOMALII ALE FRENURILOR: FRENUL LINGUAL – FRENECTOMIA",
+        answer: "/131.jpg",
+    },
+
+    {
+        question: "FIBROMATOZA TUBEROZITARĂ",
+        answer: "/132.jpg",
+    },
+
+    {
+        question: "HIPERPLAZIA INFLAMATORIE PAPILARĂ PALATINALĂ ",
+        answer: "/133.jpg",
+    },
+
+    {
+        question: "CREASTA BALANTĂ",
+        answer: "/134.jpg",
+    },
+
+    {
+        question: "HIPERPLAZIA GINGIVALĂ",
+        answer: "/135.jpg",
+    },
+
+    {
+        question:
+            "PLASTIA ŞANŢURILOR PERIOSOASE: VESTIBULOPLASTIA LA MANDIBULĂ",
+        answer: "/136.jpg",
+    },
+
+    {
+        question: "PLASTIA ŞANŢURILOR PERIOSOASE: VESTIBULOPLASTIA LA MAXILAR ",
+        answer: "/137.jpg",
+    },
+
+    {
+        question:
+            "PLASTIA ŞANŢURILOR PERIOSOASE: PLASTIA ŞANŢULUI PELVILINGUAL",
+        answer: "/138.jpg",
+    },
+
+    {
+        question: "EXTRACȚIA ALVEOLOPLASTICĂ INTRASEPTALĂ",
+        answer: [
+            "Extracția alveoloplastică:(plastia alveolei,regularizarea la niv suprafetelor osoase si/sau a septurilor interradiculare/dentare, a gingivomucoasei si sutura imediata postextr-ajuta la conservarea a osului alveolar)",
+            "-",
+            "EXTRACTIILE SINGULARE: dinte neextruzat: se face decolarea gingivomucoasei in jurul coletului, se practica extractia dintelui cat mai putin traumatica, se regularizeaza marginile osoase subtiri sau proeminente rezectia oasoasa se va limita la atat cat este necesar ca marginile plagii mucoase sa poata fi appropriate, trecute peste alveola si saturate ",
+            "-",
+            "Dinte extruzat: dupa extractia netraumatica a dintelui se face rezectia portiunii osoase in exces, marginiile plagii mucoase se vor sutura peste alveola",
+            "-",
+            "2. Regularizarea crestei alveolare",
+            "-indicată când există proeminenţe osoase neregulate",
+            "-aceste neregularităţi rezultă după extracţii realizate la diferite intervale de timp",
+            "-",
+            "3. Rezecţia modelantă a crestelor alveolare în protruzie",
+            "-indicată la edentaţii care prezintă proalveolie cu prodenţie",
+            "-Rezecţia modelantă a crestelor alveolare în protruzie",
+            "-",
+            "Tehnici chirurgicale:",
+            "-Fracturarea tablei osoase externe (Obwegeser) si reducem protruzia",
+            "-Rezecţia septurilor interalveolare (Dean)putem sa apropriem creasta vestibulara de cea palatinal reducand protruzia",
+            "-",
+            "4. Plastia modelantă a torusurilor",
+            "Torusul palatin:",
+            "Landa – 3 forme clinice:",
+            "-torus ovalar, cu localizare în 1/3 posterioara a bolţii palatine",
+            "-torus alungit, cu localizare în 2/3 posterioare ale bolţii",
+            "-torus alungit, cu localizare în 2/3 anterioare ale bolţii.",
+            "-",
+            "5. Rezecţia modelantă a hiperostozelor tuberozitare:planul osos este in exces:",
+            "-indicată în cazurile unor tuberozităţi voluminoase atât în plan V-O, cât şi descendent",
+            "-frecvent este însoţită de fibromatoză",
+            "-Intervenție chirurgicală care se realizează concomitent cu extracțiile dentare, prin care se realizează conservarea osului alveolar, odată cu regularizarea osoasă la nivelul suprafețelor neregulate și/sau a septurilor interradiculare/interdentare – favorizează stabilitatea protezelor mobile",
+            "-După extracția dentară  - incizie la nivelul festonului gingival cares este prelungită 0,5 – 1 cm față de ultima alveolă postextracțională",
+            "-După decolarea minimă a lambourilor, vestibular și oral, se regularizează osul alveolar cu instrumenatr rotativ – dacă nu expune toate zonele osoase neregulate se pot realiza incizii de descărcare, divergente spre fundul de sac vestibular, pentru a preveni astfel ruperea accidentală a mucoperiostului în timpul remodelării osoase",
+            "-Marginile în exces ale lamboului mucozal se îndepărtează împreună cu papilele interdentare",
+            "-Plaga se suturează cu fibre separate sau continue",
+            "-",
+            "Extracția alveoloplastică intraseptală ",
+            "Indicată – după extracții multiple și adaptată pentru a conserva cât mai bine înălțimea osului alveolar TEHNICĂ",
+            "•Incizie mucoperiostală pe mijlocul crestei alveolare, cu decolarea limitată a lambourilor",
+            "•Cu instrumentul rotativ și a pensei ciupitoare de os se îndepărtează septurile interdentare restante, se regularizează marginile osoase, se realizează osteotomia corticalei vestibulare la extremități",
+            "•După repoziționarea corticalei vestibulare – excizie papile interdentare și mucoperiost în exces",
+            "•Sutura cu fir continuu/cu fire separate",
+            "-",
+            "Dean – modifică tehnica – realizează fractura corticalei vestibulare și orale prin aplicarea unei presiuni digitale. Dezavantaj – poate favoriza apariția unei creste alveolare ascuțite, nefavorabilă protezării ",
+            "Obwegeser – osteotomia corticalei vestibulare și orale la baza crestei alveolare cu instrument rotativ, după fracturarea corticalei osoase se repoziționează în așa fel încât creasta alveolară să nu fie ascuțită",
+            "AVANTAJ extracție alveoloplastică",
+            "-Permite deretentivizarea corticalei vestibulare în aceeași etapă cu extracția dentară, fără a modifica înălțimea crestei",
+            "-Conservarea periostului și a vascularizației locale  - reduce atrofia postextracțională",
+            "DEZAVANTAJ major – consecutiv îndepărtării unei cantități mari de os medular este o grosime mică care poate limita ulterior inserarea implanturilor orale",
+        ],
+    },
+
+    {
+        question: "REZECŢIA MODELANTĂ A APOFIZELOR GENII HIPERTROFICE",
+        answer: "/140.jpg",
+    },
+
+    {
+        question: "PLASTIA MODELANTĂ A TORUSULUI PALATIN",
+        answer: "/141.jpg",
+    },
+
+    {
+        question: "PLASTIA MODELANTĂ A TORUSULUI  MANDIBULAR",
+        answer: "/142.jpg",
+    },
+
+    {
+        question: "REZECŢIA MODELANTĂ A OSTEOAMELOR PERIFERICE",
+        answer: "/143.jpg",
+    },
+    {
+        question:
+            "PRINCIPII GENERALE DE TRATAMENT ÎN SUPURAŢIILE ORO-MAXILO-FACIALE",
+        answer: "/144.jpg",
+    },
+    {
+        question:
+            "INFECŢII PERIOSOASE: SPAŢIUL VESTIBULAR – DELIMITARE, ASPECTE CLINICE, DIAGNOSTIC DIFERENȚIAL, TRATAMENT",
+        answer: "/145.jpg",
+    },
+    {
+        question:
+            "INFECŢII PERIOSOASE: SPAŢIUL PALATINAL – DELIMITARE, ASPECTE CLINICE, DIAGNOSTIC DIFERENȚIAL, TRATAMENT",
+        answer: "/146.jpg",
+    },
+    {
+        question: "INFECŢII PERIOSOASE: SPAŢIUL CORPULUI MANDIBULAR",
+        answer: "/147.jpg",
+    },
+    {
+        question: "CLASIFICAREA INFECȚIILOR OMF",
+        answer: "/148.jpg",
+    },
+    {
+        question:
+            "METODE DE MĂRIRE A OFERTEI OSOASE: DEFINIȚI OSTEOPLASTIA DE ADIȚIE",
+        answer: "/149.jpg",
+    },
+    {
+        question:
+            "METODE DE MĂRIRE A OFERTEI OSOASE: DEFINIȚI OSTEOPLASTIA DE AUGMENTARE",
+        answer: "/150.jpg",
+    },
+    {
+        question:
+            "METODE DE MĂRIRE A OFERTEI OSOASE: DEFINIȚI OSTEOPLASTIA DE INTERPOZIȚIE",
+        answer: "/151.jpg",
+    },
+    {
+        question:
+            "SITURI DONOARE PENTRU RECOLTARE DE LA NIVEL LOCAL A AUTOGREFELOR OSOASE NEVASCULARIZATE ",
+        answer: "/152.jpg",
+    },
+    {
+        question: "AUTOGREFE OSOASE NEVASCULARIZATE RECOLTATE DE LA DISTANȚĂ",
+        answer: "/153.jpg",
+    },
+    {
+        question: "AUTOGREFE OSOASE VASCULARIZATE ȘI MICROANOSTOMOZATE",
+        answer: "/154.jpg",
+    },
+    {
+        question: "ALOGREFELE FOLOSITE ÎN MĂRIREA OFERTEI OSOASE",
+        answer: "/155.jpg",
+    },
+    {
+        question:
+            "HETEROGREFELE (XENOGREFELE) FOLOSITE ÎN MĂRIREA OFERTEI OSOASE",
+        answer: "/156.jpg",
+    },
+    {
+        question:
+            "MATERIALELE SINTETICE (ALOPLASTICE) FOLOSITE ÎN MĂRIREA OFERTEI OSOASE",
+        answer: "/157.jpg",
+    },
+    {
+        question: "MĂRIREA OFERTEI OSOASE SUB-SINUZALE",
+        answer: "/158.jpg",
+    },
+    {
+        question: "CONTRAINDICAȚII ÎN LIFTING SINUS",
+        answer: "/159.jpg",
+    },
 ]; 
+
+
+export const data = rawData.map((el, index)=>{
+    return {...el, index: index+1}}
+)

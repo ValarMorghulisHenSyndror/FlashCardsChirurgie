@@ -1,21 +1,26 @@
-import React from "react";
+"use client"
+
+import React, { useState } from "react";
 import styles from "./page.module.css";
 import { data } from "@/data/database";
 import Minicard from "@/components/Minicard"; 
 
-const study = ():React.ReactNode => {
+const Study = ():React.ReactNode => {
+
+    const [inputText, setInputText] = useState("")
+    
     return (
         <div className={styles.container}>
             <div className={styles.introContainer}>
-                <h1 className={styles.title}>Study Hall</h1>
-                <input type="text" className={styles.input} />
+                <h1 className={styles.title}>Study Hall </h1>
+                <input type="text" className={styles.input} placeholder="Search..." onChange={(e)=>setInputText(e.target.value.toLowerCase())}/>
             </div>
             <section className={styles.cardContainer
             }>
-                {data.map((el, i) => (
+                {data.filter((el, index)=>el.question.toLowerCase().includes(inputText) || String(index+1).includes(inputText)).map((el, i) => (
                     <Minicard
                         title={el.question}
-                        index={i + 1}   
+                        index={el.index}   
                         key={i}
                         link={`/study/${i}`}
                     />
@@ -25,4 +30,4 @@ const study = ():React.ReactNode => {
     );
 };
 
-export default study;
+export default Study;

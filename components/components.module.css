@@ -358,15 +358,12 @@
         padding: 20px 10px;
         font-size: 12px;
     }
-    .answerTextContainer p{
-        color: rgb(250, 225, 255);
-        font-size: 25px;
-        font-weight: bold;
-        padding-bottom: 20px;
+    .answerTextContainer p{ 
+        font-size: 16px; 
     }
 
     .answerText{ 
-        font-size: 25px;   
+        font-size: 13px;   
     }
 
     .answerText li{
