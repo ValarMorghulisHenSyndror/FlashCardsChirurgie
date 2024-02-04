@@ -21,8 +21,8 @@ const Study = ():React.ReactNode => {
                     <Minicard
                         title={el.question}
                         index={el.index}   
-                        key={i}
-                        link={`/study/${i}`}
+                        key={el.index}
+                        link={`/study/${el.index-1}`}
                     />
                 ))}
             </section>
