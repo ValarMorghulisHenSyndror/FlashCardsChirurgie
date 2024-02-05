@@ -274,6 +274,13 @@
 /*---------------------------------------------------------------------Media Styles------------------------------------------------------------------------ */
 
 
+@media screen and (max-width: 1200px) {
+    .card-container{
+        width: 420px;
+        height: 240px;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     .studyTitle{ 
         font-size: 25px;  
@@ -287,10 +294,6 @@
     .quizCardContainer{ 
         width: 500px;
         height: 286px;    
-    }
-    .card-container{
-        width: 350px;
-        height: 200px;
     }
     .title{
         font-size: 17px;
