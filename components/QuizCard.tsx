@@ -87,6 +87,7 @@ const QuizCard = (): ReactNode => {
                     className={styles.answerButton}
                     onClick={() => {
                         setAnswerState(true);
+                        
                     }}
                 >
                     Check answer

@@ -48,13 +48,13 @@ export default function Home():React.ReactNode {
                     </div>
                     <div>
                         <span>
-                            You&apos;re capable and resilient, believe in
-                            yourself!
+                            It&apos;s about the journey, not just the
+                            destination.
                         </span>
-                        <span>Your hard work will pay off – keep pushing!</span>
-                        <span>Today is your big day so shine</span>
+                        <span>Your dedication is inspiring; keep it up!</span>
                         <span>
-                            Each exam is a chance to showcase your growth.
+                            Stay positive; you&apos;re one step closer to your
+                            goals.
                         </span>
                         <span> 
                             Your efforts will shine brighter than any exam
@@ -65,13 +65,13 @@ export default function Home():React.ReactNode {
                             you!
                         </span>
                         <span>
-                            Stay positive; you&apos;re one step closer to your
-                            goals.
+                            You&apos;re capable and resilient, believe in
+                            yourself!
                         </span>
-                        <span>Your dedication is inspiring; keep it up!</span>
+                        <span>Your hard work will pay off – keep pushing!</span>
+                        <span>Today is your big day so shine</span>
                         <span>
-                            It&apos;s about the journey, not just the
-                            destination.
+                            Each exam is a chance to showcase your growth.
                         </span>
                     </div>
                 </div>

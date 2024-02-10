@@ -8,8 +8,8 @@ export const metadata: Metadata = {
     description: "Studying Dental Surgery",
     icons: [
         {
-            url: "/logo.png",
-            href: "/logo.png",
+            url: " /Logo.png", 
+            href: "/Logo.png"
         },
     ],
 };
